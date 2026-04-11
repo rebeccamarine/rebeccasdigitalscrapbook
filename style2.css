@@ -1,6 +1,6 @@
 body {
     #background: #f4eeff;
-    background-image: url("images/background.png");
+    background-image: url('background.png');
     font-family: Arial, sans-serif;
     text-align: center;
     color: #424874;
@@ -55,6 +55,14 @@ h1 {
 .intro a:hover {
     color: #a6b1e1;
     display: inline;
+}
+
+.intro img {
+    position:relative;
+    margin:0px;
+    padding:0px;
+    line-height:0px;
+
 }
 
 .homeheader {
@@ -172,6 +180,18 @@ h1 {
 
 }
 
+.infocard a {
+    font-size: 14px;
+    margin: 0;
+    text-decoration: none;
+    color: #424874;
+    display: block;
+}
+
+.infocard a:hover {
+    color: #a6b1e1;
+}
+
 /* The sidebar menu */
 .sidenav {
     width: 200px;
@@ -245,4 +265,38 @@ tr:nth-child(odd) {
 
 .picture {
     border: 5px solid #a6b1e1;
+}
+
+.headergrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+    flex: 1;
+
+}
+.headercard {
+    background: none;
+    border: 0 solid #a6b1e1;
+    padding: 0;
+    display: flex;
+    width: stretch;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.headercard a {
+    font-size: 14px;
+    margin: 0;
+    text-decoration: none;
+    color: #424874;
+    display: block;
+}
+
+.headercard a:hover {
+    color: #a6b1e1;
 }
