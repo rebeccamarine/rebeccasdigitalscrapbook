@@ -59,9 +59,9 @@ h1 {
 
 .intro img {
     position:relative;
-    margin:0px;
-    padding:0px;
-    line-height:0px;
+    margin:0;
+    padding:0;
+    line-height:0;
 
 }
 
@@ -270,9 +270,9 @@ tr:nth-child(odd) {
 .headergrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0px;
+    gap: 0;
     margin: 0 auto;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     box-sizing: border-box;
     flex: 1;
 
