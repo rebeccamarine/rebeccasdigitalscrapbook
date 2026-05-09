@@ -30,6 +30,20 @@
     <div class="intro">
       <p> <img src="images/exclamation.gif" alt=“Exclamation”> </p>
       <p> This page is under construction </p>
+      <p> To conduct the house price study, I started by downloading data from the <a href="https://www.propertypriceregister.ie/website/npsra/pprweb.nsf/PPR?OpenForm">Property Price Register</a>.
+      I tidied the data up in Excel, taking out any mistakes and adding a column for the Eircode and Townland. I knew I wanted to pull in the latitude and longitude,
+        so I made some blank columns that I could fill in later and saved it as a .csv.</p>
+      <p> [picture of excel]</p>
+      <p> Pulling in the Lat/Longs was the first issue that I couldn't solve. I signed up for Google API and wrote some Python code that would hopefully read in the CSV,
+        check the Eircode and append the coordinates into the two columns but for some reason it wouldn't return any coordinates. I tried again with the Open Street Map API,
+        but that didn't work either.</p>
+      <p> [picture of python]</p>
+      <p> After trying a bunch of free APIs, I gave up and decided that I didn't need exact coordinates. I took the list of townlands, went on Google Maps and manually searched
+      for each place. There wasn't too many so it didn't take too long. I then used a VLookup to pull them into the main sheet.</p>
+      <p> [picture of list of townlands]</p>
+      <p> Next, I wanted to create the graphic of the map. My workplace has an Arc GIS license so I started by pulling in the local authority/administrative areas shapefile,
+        and the river and water bodies data, accessible from the OSI and the EPA through <a href="https://data.gov.ie/">data.gov.ie</a>. I fed in the .csv file and used the
+        geoprocessing tool XY Table to Points to covert it into point data. As expected the points from each townland were overlapping.</p>
     </div>
 
     <div class = "footer">
