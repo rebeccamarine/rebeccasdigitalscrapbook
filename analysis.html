@@ -43,7 +43,20 @@
       <p> [picture of list of townlands]</p>
       <p> Next, I wanted to create the graphic of the map. My workplace has an Arc GIS license so I started by pulling in the local authority/administrative areas shapefile,
         and the river and water bodies data, accessible from the OSI and the EPA through <a href="https://data.gov.ie/">data.gov.ie</a>. I fed in the .csv file and used the
-        geoprocessing tool XY Table to Points to covert it into point data. As expected the points from each townland were overlapping.</p>
+        geoprocessing tool XY Table to Points to covert it into point data. As expected the points from each townland were overlapping. I searched for a jitter tool
+        (I think it was Disperse Markers?? Can't remember) that allowed the points to be displayed at random distances from the original coordinates, without changing
+        the data underneath.</p>
+      <p> [picture of arc pro]</p>
+      <p> At this point I decided to make things a little harder for myself. I wanted to use as much free and open source products as possible to make this process
+        replicable by anyone. So I loaded all my GIS stuff into QGIS, a software I hadn't used in over 10 years (the horror). The equivalent jitter tool in QGIS unfortunately
+      put everything into a perfect circle. No randomness - everything was organised too well.</p>
+      <p> [picture of qgis perfect circles]</p>
+      <p> So, I went back to Excel (though, if that's not available to you, Google Sheets, Open Office, Libre Office or Apple's 'Numbers' all function similarly with similar formulas).
+      I used randbetween() to pick a distance from each lat and long. If doing this in Python you could use randint() from the random package. It took a few goes to figure out how far
+        visually I wanted to move things, but now I had jittered the points. </p>
+      <p> [picture of randbetween()]</p>
+      <p>I loaded them back into QGIS and plotted them. I used the timeline feature to move between the years and exported them as a series of jpegs. I then put the
+        jpegs into a slidedeck and exported them as a .gif.</p>
     </div>
 
     <div class = "footer">
