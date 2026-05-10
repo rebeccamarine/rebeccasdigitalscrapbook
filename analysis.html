@@ -52,11 +52,21 @@
       put everything into a perfect circle. No randomness - everything was organised too well.</p>
       <p> [picture of qgis perfect circles]</p>
       <p> So, I went back to Excel (though, if that's not available to you, Google Sheets, Open Office, Libre Office or Apple's 'Numbers' all function similarly with similar formulas).
-      I used randbetween() to pick a distance from each lat and long. If doing this in Python you could use randint() from the random package. It took a few goes to figure out how far
+      I used randbetween() to pick a distance from each lat and long. If doing this in Python, you could use randint() from the random package. It took a few goes to figure out how far
         visually I wanted to move things, but now I had jittered the points. </p>
       <p> [picture of randbetween()]</p>
       <p>I loaded them back into QGIS and plotted them. I used the timeline feature to move between the years and exported them as a series of jpegs. I then put the
         jpegs into a slidedeck and exported them as a .gif.</p>
+      <p> [picture of map]</p>
+      <p> The next step was the hard part. I knew I wanted an interactive dashboard with boxplots and dropdown filters. I knew I wanted to build it in Python,
+        but I also knew my Python skills were limited. Thankfully, through the power of the internet, I found tutorials for using packages such as plotly, pandas and dash.
+        I will admit, I ran the code through co-pilot near the end. I had gotten a bit stuck on a few bits and googling was getting me no-where. </p>
+      <p> [picture of code]</p>
+      <p>Next, I searched up where I could host my code and stumbled upon a site called Render. It's free for hosting a few bits, and it is set up in a way that I could store
+        my code in GitHub, call it into Render and then embed the final product into my website HTML. The only downsides are that it has to send a new query each time my webpage
+        is accessed. This makes it slow to load, and sometimes the query times out before it loads. But, hey, it's free and I don't have to re-do the whole thing if I want to add
+        new data into the .csv file. I just have to go to my GitHub file and paste it in. Easy peasy.</p>
+      <p> [embed two dashboards]</p>
     </div>
 
     <div class = "footer">
